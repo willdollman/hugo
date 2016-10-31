@@ -227,9 +227,8 @@
 			"revisionTime": "2016-09-25T22:06:09Z"
 		},
 		{
-			"checksumSHA1": "c7jHQZk5ZEsFR9EXsWJXkszPBZA=",
-			"path": "github.com/russross/blackfriday",
-			"revision": "5f33e7b7878355cd2b7e6b8eefc48a5472c69f70",
+			"path": "github.com/willdollman/blackfriday",
+			"revision": "f4501810670d7281b1b418840c16c63d1173e753",
 			"revisionTime": "2016-10-03T16:27:22Z"
 		},
 		{

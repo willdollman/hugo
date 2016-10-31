@@ -21,7 +21,7 @@ import (
 	"testing"
 
 	"github.com/miekg/mmark"
-	"github.com/russross/blackfriday"
+	"github.com/willdollman/blackfriday"
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/assert"
 )
