@@ -28,8 +28,8 @@
 		},
 		{
 			"checksumSHA1": "ntacCkWfMT63DaehXLG5FeXWyNM=",
-			"path": "github.com/cpuguy83/go-md2man/md2man",
-			"revision": "a65d4d2de4d5f7c74868dfa9b202a3c8be315aaa",
+			"path": "github.com/willdollman/go-md2man/md2man",
+			"revision": "093126ea0379ea8e82eab771c19d6473dc5d7323",
 			"revisionTime": "2016-09-04T16:08:59Z"
 		},
 		{
