@@ -6,7 +6,7 @@
 
 COMMIT_HASH=`git rev-parse --short HEAD 2>/dev/null`
 BUILD_DATE=`date +%FT%T%z`
-LDFLAGS=-ldflags "-X github.com/spf13/hugo/hugolib.CommitHash=${COMMIT_HASH} -X github.com/spf13/hugo/hugolib.BuildDate=${BUILD_DATE}"
+LDFLAGS=-ldflags "-X github.com/willdollman/hugo/hugolib.CommitHash=${COMMIT_HASH} -X github.com/willdollman/hugo/hugolib.BuildDate=${BUILD_DATE}"
 
 all: gitinfo
 
@@ -35,26 +35,26 @@ docker:
 govendor:
 	go get -u github.com/kardianos/govendor
 	go install github.com/kardianos/govendor
-	govendor sync github.com/spf13/hugo
+	govendor sync github.com/willdollman/hugo
 
 check: fmt vet test test-race
 
 cyclo:
-	@for d in `govendor list -no-status +local | sed 's/github.com.spf13.hugo/./'` ; do \
+	@for d in `govendor list -no-status +local | sed 's/github.com.willdollman.hugo/./'` ; do \
 		if [ "`gocyclo -over 20 $$d | tee /dev/stderr`" ]; then \
 			echo "^ cyclomatic complexity exceeds 20, refactor the code!" && echo && exit 1; \
 		fi \
 	done
 
 fmt:
-	@for d in `govendor list -no-status +local | sed 's/github.com.spf13.hugo/./'` ; do \
+	@for d in `govendor list -no-status +local | sed 's/github.com.willdollman.hugo/./'` ; do \
 		if [ "`gofmt -l $$d/*.go | tee /dev/stderr`" ]; then \
 			echo "^ improperly formatted go files" && echo && exit 1; \
 		fi \
 	done
 
 lint:
-	@for d in `govendor list -no-status +local | sed 's/github.com.spf13.hugo/./'` ; do \
+	@for d in `govendor list -no-status +local | sed 's/github.com.willdollman.hugo/./'` ; do \
 		if [ "`golint $$d | tee /dev/stderr`" ]; then \
 			echo "^ golint errors!" && echo && exit 1; \
 		fi \

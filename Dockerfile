@@ -17,7 +17,7 @@ RUN go get github.com/stretchr/testify/assert \
 	&& go get github.com/kardianos/osext \
 	&& go get github.com/miekg/mmark \
 	&& go get github.com/mitchellh/mapstructure \
-	&& go get github.com/russross/blackfriday \
+	&& go get github.com/willdollman/blackfriday \
 	&& go get github.com/shurcooL/sanitized_anchor_name \
 	&& go get github.com/spf13/afero \
 	&& go get github.com/spf13/cast \
